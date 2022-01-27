@@ -1,0 +1,68 @@
+<div class="container-alta">
+    <h1>Alta / Baja y Modificación</h1>
+    <br>
+
+    <form autocomplete="off">
+        <!-- Campo de nombre -->
+        <label for="nombre">Nombre</label>
+        <input id="nombre" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de precio -->
+        <label for="precio">Precio</label>
+        <input id="precio" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de stock -->
+        <label for="stock">Stock</label>
+        <input id="stock" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de marca -->
+        <label for="marca">Marca</label>
+        <input id="marca" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de categoria -->
+        <label for="categoria">Categoria</label>
+        <input id="categoria" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de detalles -->
+        <label for="detalles">Detalles</label>
+        <input id="detalles" class="data-validation" type="text">
+        <div class="msg-validation"></div>
+
+        <!-- Campo de foto -->
+        <!-- <label for="foto">Foto</label>
+        <input id="foto" type="text">
+        <div></div> -->
+        
+        <div id="drop-area">
+            <p>Subir imágen al servidor con <b>file dialog</b> ó con <b>Drag and Drop</b> dentro del área punteada</p>
+            <br>
+
+            <input id="foto" type="file" accept="image/*" onchange="formularioAlta.handleFiles(this.files)">
+            <label class="button" for="foto">file dialog</label>
+            <br><br>
+
+            <progress id="progress-bar" max="100" value="0"></progress>
+            <div id="gallery"><img src="" alt=""></div>
+        </div>
+        
+        <!-- Campo de envio -->
+        <label for="envio">Envio</label>
+        <input id="envio" class="data-validation" type="checkbox">
+
+
+        <br><br>
+        <hr>
+        <h1>Listado de productos</h1>
+    
+        <button>Agregar</button>
+
+    </form>
+
+    <div id="listado-productos"></div>
+
+</div>
