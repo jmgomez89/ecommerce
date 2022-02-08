@@ -11,6 +11,6 @@ dotenv.config({
 
 export default {
     PORT : process.env.PORT || 8080,
-    TIPO_DE_PERSISTENCIA:'MONGODB', //process.env.TIPO || 'MEM',    // 'MEM', 'FILE', 'MONGODB'
+    TIPO_DE_PERSISTENCIA: process.env.TIPO || 'MONGODB',    // 'MEM', 'FILE', 'MONGODB'
     STR_CNX:'mongodb+srv://juanmgomez:Ciclon22@jmg.mmdd9.mongodb.net/jmg?retryWrites=true&w=majority' //process.env.CNX || null
 }
