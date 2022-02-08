@@ -1,15 +1,10 @@
-//https://www.npmjs.com/package/dotenv?activeTab=readme
 import dotenv from 'dotenv'
 
-//dotenv.config()     // lee el archivo .env
-
-//console.log('__dirname: ', __dirname)   // sólo funciona en commonjs
 console.log('process.cwd(): ', process.cwd())   // funciona en commonjs y module
 
-// lee el archivo indicado
+
 dotenv.config({
-    //path : 'miconfig.env'
-    //path: process.cwd() + '/' + 'miconfig.env'
+
     path: process.cwd() + '/' + process.env.NODE_ENV + '.env'
 })     
 

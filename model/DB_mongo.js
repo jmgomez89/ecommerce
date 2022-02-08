@@ -7,12 +7,9 @@ class Mongo_DB {
 
     static genIdKey(obj) {
         if(Array.isArray(obj)) {
-            //console.log(obj)
             for(let i=0; i<obj.length; i++) {
-                //console.log(i)
                 obj[i].id = obj[i][Mongo_DB.pk]
             }
-            //console.log(obj)
         }
         else {
             obj.id = obj[Mongo_DB.pk]

@@ -27,20 +27,5 @@ router.post('/', upload.single('foto') , (req,res,next) =>{
     res.json({ nombre: file.filename })
 })
 
-/*
-const middleware1 = (req,res,next) => {
-    next()
-}
-
-const middleware2 = (req,res,next) => {
-    next()
-}
-
-// Router POST 
-router.post('/', middleware1, middleware2, (req,res) =>{
-
-})
-*/
-
 //exports
 export default router

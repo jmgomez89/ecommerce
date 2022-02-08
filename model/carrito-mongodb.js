@@ -1,4 +1,3 @@
-//https://mongoosejs.com/
 import mongoose from 'mongoose'
 import Mongo_DB from './DB_mongo.js'
 

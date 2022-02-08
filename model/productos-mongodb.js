@@ -1,4 +1,3 @@
-//https://mongoosejs.com/
 import mongoose from 'mongoose'
 import Mongo_DB from './DB_mongo.js'
 
@@ -44,7 +43,6 @@ class ProductoModelMongoDB {
         if(!Mongo_DB.conexionOk) return {}
         try {
             let producto = await ProductoModel.findOne({_id:id}).lean()
-            //console.log(producto)
             return Mongo_DB.genIdKey(producto)
         }
         catch(error) {
@@ -58,7 +56,6 @@ class ProductoModelMongoDB {
         if(!Mongo_DB.conexionOk) return []
         try {
             let productos = await ProductoModel.find({}).lean()
-            //console.log({...productos})
             return Mongo_DB.genIdKey(productos)
         }
         catch(error) {
@@ -72,10 +69,8 @@ class ProductoModelMongoDB {
         if(!Mongo_DB.conexionOk) return {}
         try {
             await ProductoModel.updateOne({_id:id},{$set: producto})
-            //console.log(producto)
 
             let productoActualizado = await ProductoModel.findOne({_id:id}).lean()
-            //console.log(productoActualizado)
             return Mongo_DB.genIdKey(productoActualizado)
         }
         catch(error) {
@@ -91,7 +86,6 @@ class ProductoModelMongoDB {
             
             let productoBorrado = await ProductoModel.findOne({_id:id}).lean()
             await ProductoModel.deleteOne({_id:id})
-            //console.log(productoBorrado)
             return Mongo_DB.genIdKey(productoBorrado)
         }
         catch(error) {

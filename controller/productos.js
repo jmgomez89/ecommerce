@@ -17,7 +17,7 @@ const getProductos = async (req,res) => {
 /* Controller POST */
 const postProducto = async (req,res) => {
     let producto = req.body
-    //agregar
+
     let productoAgregado = await api.guardarProducto(producto)
 
     res.json(productoAgregado)
@@ -27,7 +27,7 @@ const postProducto = async (req,res) => {
 const putProducto = async (req,res) => {
     let id = req.params.id
     let producto = req.body
-    //actualizar
+
     let productoActualizado = await api.actualizarProducto(id,producto)
 
     res.json(productoActualizado)
@@ -36,7 +36,7 @@ const putProducto = async (req,res) => {
 /* Controller DELETE */
 const deleteProducto = async (req,res) => {
     let id = req.params.id
-    //borrar
+
     let productoBorrado = await api.borrarProducto(id)
 
     res.json(productoBorrado)
@@ -44,7 +44,7 @@ const deleteProducto = async (req,res) => {
 
 //exports
 export default {
-    getProductos, // es igual a -> getProductos : getProductos,
+    getProductos, 
     postProducto,
     putProducto,
     deleteProducto

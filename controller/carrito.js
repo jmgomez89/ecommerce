@@ -4,11 +4,8 @@ import api from "../api/carrito.js"
 /* Controller POST */
 const postCarrito = async (req, res) => {
     let carrito = req.body
-    //console.log(carrito)
 
-    //agregar
     let carritoAgregado = await api.guardarCarrito(carrito)
-    //console.log(carritoAgregado)
 
     let items = []
     for(let item of carritoAgregado) {
@@ -35,7 +32,6 @@ const postCarrito = async (req, res) => {
     mercadopago.preferences
         .create(preference)
         .then(function (response) {
-            // En esta instancia deberás asignar el valor dentro de response.body.id por el ID de preferencia solicitado en el siguiente paso
             res.json({id: response.body.id, items})
         })
         .catch(function (error) {

@@ -1,5 +1,4 @@
 import express from 'express'
-//https://www.npmjs.com/package/cors
 import cors from 'cors'
 
 import routerProductos from './router/productos.js'
@@ -39,7 +38,7 @@ console.log('----------------------------------------')
 process.on('SIGINT', () => {
     console.log('Control-C detectado!')
 
-    //process.exit(0)
+
 })
 
 process.on('exit', code => {

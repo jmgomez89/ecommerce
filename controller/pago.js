@@ -1,7 +1,6 @@
-// SDK de Mercado Pago
 import mercadopago from "mercadopago"
 
-// Agrega credenciales
+
 mercadopago.configure({
     access_token: "TEST-2526105000325997-020800-7e1bd12150947dc991d01eaa81776de8-149580108",
 });

@@ -1,5 +1,4 @@
 import Joi from "joi";
-//https://joi.dev/api/?v=17.6.0
 
 class ProductosValidation {
     static validar(producto) {
@@ -14,8 +13,7 @@ class ProductosValidation {
             foto: Joi.string().empty(''),
             envio: Joi.boolean().required()
         })
-
-        //const error = productoSchema.validate(producto).error
+        
         const { error } = productoSchema.validate(producto)
 
         return error

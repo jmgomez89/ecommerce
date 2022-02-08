@@ -1,4 +1,3 @@
-// Agrega credenciales de SDK
 const mercadopago = new MercadoPago("TEST-d3cf8843-ea83-4ba7-bdef-1f4163fb519d", {
     locale: "es-AR",
 });
@@ -34,7 +33,6 @@ async function renderPago(preference) {
 
     refTotal.innerHTML = total
 
-    // Go back
     document.getElementById("go-back").addEventListener("click", function () {
         document.querySelector('main').style.display = 'block'
         document.querySelector('.section-pago').innerHTML = ''
@@ -42,16 +40,16 @@ async function renderPago(preference) {
 }
 
 
-// Create preference when click on checkout button
+
 function createCheckoutButton(preferenceId) {
-    // Initialize the checkout
+
     mercadopago.checkout({
         preference: {
             id: preferenceId
         },
         render: {
-            container: '#button-checkout', // Class name where the payment button will be displayed
-            label: 'Pagar', // Change the payment button text (optional)
+            container: '#button-checkout', 
+            label: 'Pagar', 
         }
     });
 }
