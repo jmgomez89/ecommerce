@@ -1,5 +1,3 @@
 class CarritoModel {
     carrito = []
 }
-
-

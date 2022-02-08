@@ -1,0 +1,121 @@
+.main-contacto{
+    margin-top: 6em;
+    margin-bottom: 5em;
+    font-size: 1.5em;
+}   
+
+.form-contacto {
+    width: 60%;
+    margin: auto;
+
+    &__fieldset{
+        background-color: transparent;
+        border: none;
+        font-variant: small-caps;
+    }
+
+    &__legend{
+        background-color: #DEEDF0;
+        border: 2px solid #0096C7;
+        border-radius: 3px;
+        padding: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    &__datos{
+        border: 2px #0096C7 solid;
+        background-color:#DEEDF0;
+        border-radius: 3px;
+        padding: 0.5em;
+    }
+
+    &__datos:focus-within{
+        background-color: #A2CDCD;
+    }
+
+    &__fieldset:focus-within legend{
+        background-color: #A2CDCD;
+    }
+
+    &__datos-container{
+        padding: 0.5em;
+        text-align: center;
+        font-variant: small-caps;
+    }
+
+    &__datos-container label{
+        display: block;
+    }
+
+    &__datos-container textarea{
+        margin-top: 0.6em;
+        border: 1px #0096C7 solid;
+        border-radius: 3px;
+        width: 81%;
+        min-height: 10em;
+        resize: vertical;
+        text-align: center;
+        color: #316B83;
+        font-size: 0.8em;
+        font-weight: 900;
+    }
+
+    &__input{
+        text-align: center;
+        color: #316B83;
+        border-radius: 3px;
+        width: 78%;
+        height: 2.5em;
+        border: 1px #0096C7 solid;
+        margin-top: 0.5em;
+        font-size: 0.6em;
+        font-weight: 900;
+    }
+
+    &__buttons{
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    &__button1{
+        background-color: #A2CDCD;
+        color: black;
+        border: 1px #0096C7 solid;
+        border-radius: 3px;
+        height: 2.5em;
+        padding: 0.5em;
+        font-size: 0.8em;
+        font-family: 'Gemunu Libre', sans-serif;
+    }
+
+    &__button2{
+        background-color: #A2CDCD;
+        color: black;
+        border: 1px #0096C7 solid;
+        border-radius: 3px;
+        height: 2.5em;
+        padding: 0.5em;
+        font-size: 0.8em;
+        font-family: 'Gemunu Libre', sans-serif;
+    }
+    
+    &__button1:hover{
+        background-color:#DEEDF0 ;
+    }
+
+    &__button2:hover{
+        background-color:#DEEDF0 ;
+    }
+}
+
+@media  (max-width: 425px)  {
+
+    .main-contacto{
+        margin-top: 10em;
+    }
+
+    .form-contacto {
+        width: 90%;
+    }
+    
+}

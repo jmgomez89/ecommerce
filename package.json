@@ -7,17 +7,32 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev-mem": "set PORT=3000&set TIPO=MEM&nodemon server.js",
+    "dev-file": "set PORT=5000&set TIPO=FILE&nodemon server.js",
+    "dev-mongo": "set PORT=5000&set TIPO=MONGODB&set CNX=mongodb://localhost/ecommerce&nodemon server.js",
+    "prod-mongo": "set PORT=9000&set TIPO=MONGODB&set CNX=mongodb+srv://juanmgomez:Ciclon22@jmg.mmdd9.mongodb.net/ecommerce?retryWrites=true&w=majority",
+    "dev": "set NODE_ENV=development&nodemon server.js",
+    "prod": "set NODE_ENV=production&node server.js"
   },
   "engines": {
     "node": "14.x"
   },
   "keywords": [],
-  "author": "DS",
+  "author": "Juan Manuel Gómez",
   "license": "MIT",
   "dependencies": {
+    "commonjs": "^0.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.1",
     "express": "^4.17.2",
-    "mongoose": "^6.1.7",
-    "multer": "^1.4.4"
+    "fs": "^0.0.1-security",
+    "joi": "^17.6.0",
+    "mercadopago": "^1.5.12",
+    "module": "^0.0.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.0",
+    "multer": "^1.4.4",
+    "passport": "^0.5.2"
   }
 }

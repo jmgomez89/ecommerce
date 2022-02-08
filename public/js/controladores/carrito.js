@@ -12,15 +12,14 @@ class CarritoController extends CarritoModel {
     }
 
     elProductoEstaEnElCarrito(producto) {
-        return this.carrito.filter(prod => prod.id == producto.id).length
+        return this.carrito.filter(prod => prod._id == producto.id).length
     }
     
     obtenerProductoDeCarrito(producto) {
-        return this.carrito.find(prod => prod.id == producto.id)
+        return this.carrito.find(prod => prod._id == producto.id)
     }
     
     agregarAlCarrito(producto) {
-        //console.log(producto)
         if(!this.elProductoEstaEnElCarrito(producto)) {
             producto.cantidad = 1
             this.carrito.push(producto)
@@ -34,8 +33,7 @@ class CarritoController extends CarritoModel {
     }
     
     async borrarProductoCarrito(id) {
-        //console.log(id)
-        let index = this.carrito.findIndex(producto => producto.id == id)
+        let index = this.carrito.findIndex(producto => producto._id == id)
         this.carrito.splice(index,1)
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
     
@@ -43,19 +41,22 @@ class CarritoController extends CarritoModel {
     }
     
     async enviarCarrito() {
-        var elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
+        var elemSectionCarrito = document.getElementsByClassName('section-cart')[0]
 
         elemSectionCarrito.innerHTML = '<h2>Enviando carrito...</h2>'
-        await carritoService.guardarCarritoService(this.carrito)
+        let preference = await carritoService.guardarCarritoService(this.carrito)
         this.carrito = []
         localStorage.setItem('carrito',this.carrito)
     
         elemSectionCarrito.innerHTML = '<h2>Enviando carrito... <b>OK!</b></h2>'
     
-        setTimeout(() => {
+        setTimeout( async () => {
             elemSectionCarrito.classList.remove('section-carrito--visible')
             mostrarCarrito = false
-        },1500)
+
+            console.log(preference)
+            await renderPago(preference)
+        },0)
     }
 }
 

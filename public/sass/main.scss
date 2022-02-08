@@ -1,15 +1,14 @@
 @import 'abstracts/variables';
-
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/utilities';
-
 @import 'components/card';
-@import 'components/carrito';
-@import 'components/alta';
-@import 'components/index';
-
+@import 'components/cart';
 @import 'layout/header';
-
+@import 'components/indice';
+@import 'components/pago';
 @import 'pages/index';
-
+@import 'layout/footer';
+@import 'pages/contacto';
+@import 'pages/nosotros';
+@import 'pages/alta';

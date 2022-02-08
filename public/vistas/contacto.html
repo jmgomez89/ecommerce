@@ -1,1 +1,53 @@
-<h1>Contacto</h1>
+<div class="main-contacto">
+    <form action="formulario" method="post" autocomplete="off" class="form-contacto">
+
+        <fieldset class="form-contacto__fieldset">
+
+            <legend class="form-contacto__legend">
+                Datos de Contacto 📋✔
+            </legend>
+
+            <div class="form-contacto__datos">
+
+                <div class="form-contacto__datos-container">
+                    <label for="nombre">
+                        Nombre:
+                    </label>
+                    <input class="form-contacto__input" type="text" id="nombre" name="nombre" required autofocus>
+                </div>
+
+                <div class="form-contacto__datos-container">
+                    <label for="apellido">
+                        Apellido:
+                    </label>
+                    <input class="form-contacto__input" type="text" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-contacto__datos-container">
+                    <label for="email">
+                        E-mail:
+                    </label>
+                    <input class="form-contacto__input" type="email" id="email" name="email" placeholder="Ej.: usuario@dominio.com" required>
+                </div>
+                
+                <div class="form-contacto__datos-container">
+                    <label for="comentarios">
+                        Comentarios:
+                    </label>
+                    <textarea name="comentarios" id="comentarios" >
+                    </textarea>
+                </div>
+                    
+
+            </div>
+
+            <div class="form-contacto__buttons">
+                <input class="form-contacto__button1" type="submit" value="Enviar Datos">
+                <input class="form-contacto__button2" type="reset" value="Restablecer">
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</div>

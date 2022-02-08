@@ -20,7 +20,6 @@ class ProductoController extends ProductoModel {
     }
 
     async actualizarProducto(id) {
-        console.log('actualizarProducto', id)
 
         let producto = formularioAlta.leerProductoIngresado()
         formularioAlta.limpiarFormulario()
@@ -28,19 +27,17 @@ class ProductoController extends ProductoModel {
         let productoActualizado = await productoService.actualizarProductoService(id,producto)
         console.log(productoActualizado)
 
-        let index = this.productos.findIndex(producto => producto.id == productoActualizado.id)
+        let index = this.productos.findIndex(producto => producto._id == productoActualizado.id)
         this.productos.splice(index,1,productoActualizado)
 
         renderTablaAlta(null, this.productos)
     }
 
     async borrarProducto(id) {
-        console.log('borrarProducto', id)
 
         let productoBorrado = await productoService.borrarProductoService(id)
 
-        //let index = this.productos.findIndex(producto => producto.id == productoBorrado.id)
-        let index = this.productos.findIndex(producto => producto.id == productoBorrado.id)
+        let index = this.productos.findIndex(producto => producto._id == productoBorrado.id)
         this.productos.splice(index,1)
 
         renderTablaAlta(null, this.productos)

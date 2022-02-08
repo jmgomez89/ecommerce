@@ -1,68 +1,80 @@
-<div class="container-alta">
-    <h1>Alta / Baja y Modificación</h1>
-    <br>
+<div class="alta-container" style="background-image: url(img/alta/alta.png);">
+    
+    <button id="btnListado">Ver listado de productos</button>
 
-    <form autocomplete="off">
-        <!-- Campo de nombre -->
-        <label for="nombre">Nombre</label>
-        <input id="nombre" class="data-validation" type="text">
-        <div class="msg-validation"></div>
+    <div class="container-products">
+        <h2>Listado de Productos</h2>
+        <div id="product-list"></div>
+    </div>
 
-        <!-- Campo de precio -->
-        <label for="precio">Precio</label>
-        <input id="precio" class="data-validation" type="text">
-        <div class="msg-validation"></div>
+    <form id="form-alta" autocomplete="off">
 
-        <!-- Campo de stock -->
-        <label for="stock">Stock</label>
-        <input id="stock" class="data-validation" type="text">
-        <div class="msg-validation"></div>
-
-        <!-- Campo de marca -->
-        <label for="marca">Marca</label>
-        <input id="marca" class="data-validation" type="text">
-        <div class="msg-validation"></div>
-
-        <!-- Campo de categoria -->
-        <label for="categoria">Categoria</label>
-        <input id="categoria" class="data-validation" type="text">
-        <div class="msg-validation"></div>
-
-        <!-- Campo de detalles -->
-        <label for="detalles">Detalles</label>
-        <input id="detalles" class="data-validation" type="text">
-        <div class="msg-validation"></div>
-
-        <!-- Campo de foto -->
-        <!-- <label for="foto">Foto</label>
-        <input id="foto" type="text">
-        <div></div> -->
+        <h2>Alta de Producto</h2>
         
+        <div class="user-box">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="inputs" id="nombre" name="">
+            <div class="cartel"></div>
+        </div>
+
+        <div class="user-box">
+            <label for="precio">Precio</label>
+            <input type="text" class="inputs" id="precio" name="">
+            <div class="cartel"></div>
+        </div>
+
+        <div class="user-box">
+            <label for="stock">Stock</label>
+            <input type="text" class="inputs" id="stock" name="">
+            <div class="cartel"></div>
+        </div>
+
+        <div class="user-box">
+            <label for="marca">Marca</label>
+            <input type="text" class="inputs" id="marca" name="">
+            <div class="cartel"></div>
+        </div>
+
+        <div class="user-box">
+            <label for="categoria">Categoría</label>
+            <input type="text" class="inputs" id="categoria" name="">
+            <div class="cartel"></div>
+        </div>
+
+        <div class="user-box">
+            <label for="detalles">Detalles</label>
+            <input type="text" class="inputs" id="detalles" name="">
+            <div class="cartel"></div>
+        </div>
+
         <div id="drop-area">
-            <p>Subir imágen al servidor con <b>file dialog</b> ó con <b>Drag and Drop</b> dentro del área punteada</p>
+            <p>Arrastre y suelte una imagen dentro del área punteada!</p>
             <br>
 
             <input id="foto" type="file" accept="image/*" onchange="formularioAlta.handleFiles(this.files)">
-            <label class="button" for="foto">file dialog</label>
+            <label class="button" for="foto">Haga click para subir una imagen de sus archivos</label>
             <br><br>
 
             <progress id="progress-bar" max="100" value="0"></progress>
             <div id="gallery"><img src="" alt=""></div>
         </div>
-        
-        <!-- Campo de envio -->
-        <label for="envio">Envio</label>
-        <input id="envio" class="data-validation" type="checkbox">
 
+        <div class="user-box-envio">
+            <label for="envio">Envío</label>
+            <input type="checkbox" class="inputs" id="envio" name="" >
+            <div class="cartel"></div>
+        </div>
 
-        <br><br>
-        <hr>
-        <h1>Listado de productos</h1>
-    
-        <button>Agregar</button>
+        <button class="btn-agregar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Agregar
+        </button>
 
     </form>
-
-    <div id="listado-productos"></div>
+    
+    
 
 </div>

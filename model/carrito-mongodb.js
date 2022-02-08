@@ -1,6 +1,6 @@
 //https://mongoosejs.com/
 import mongoose from 'mongoose'
-import ProductoModelMongoDB from './productos-mongodb.js'
+import Mongo_DB from './DB_mongo.js'
 
 /* ---------------------------------------------------------------- */
 /* Esquema del documento carrito */
@@ -17,7 +17,7 @@ class CarritoModelMongoDB {
 
     /* CRUD -> C (Create) */
     async createCarrito(carrito) {
-        if(!ProductoModelMongoDB.conexionOk) return {}
+        if(!Mongo_DB.conexionOk) return {}
         try {
             const carritoSave = new CarritoModel({carrito : carrito})
             await carritoSave.save()

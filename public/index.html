@@ -4,84 +4,212 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eCommerce</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/sass/main.css">
+    <link rel="shortcut icon" href="/img/logo/favicon-32x32.png">
+    <title>Connecticus</title>
 </head>
-<body>
-    <header class="main-header">
 
-        <input type="checkbox" id="menu">
+<body>
+
+    <header class="header">
+
+        <div class="header__logo-container">
+            <a href="/index.html" class="header__logo" style="background-image: url(/img/logo/logo_white_large.png);"></a>
+        </div>
+
+        <input type="checkbox" id="menu"> 
 
         <nav class="nav-bar">
-            <ul class="nav-bar__nav-list">
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="" id="inicio">Inicio</a>
+            <ul class="nav-bar__ul">
+                <li class="nav-bar__li">
+                    <a href="" class="nav-bar__link" id="inicio">Inicio</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="" id="alta">Alta</a>
+                <li class="nav-bar__li">
+                    <a href="" class="nav-bar__link" id="alta">Alta</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="" id="contacto">Contacto</a>
+                <li class="nav-bar__li">
+                    <a href="" class="nav-bar__link" id="contacto">Contacto</a>
                 </li>
-                <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="" id="nosotros">Nosotros</a>
+                <li class="nav-bar__li">
+                    <a href="" class="nav-bar__link" id="nosotros">Nosotros</a>
                 </li>
             </ul>
         </nav>
+
+        
+
         <div class="search-bar">
-            <div class="search-bar__logo-container">
-                Logo
-            </div>
+
+            <input type="checkbox" id="menu2">
+
             <form class="search-bar__form-container">
-                <label class="search-bar__form-label" for="busqueda">Buscar</label>
-                <input class="search-bar__form-search" id="busqueda" type="search">
-                <input class="search-bar__form-submit" type="submit" value="Buscar">
+                <input class="search-bar__form-search" type="search" id="busqueda">
+                <button class="search-bar__form-submit" type="submit" name="Buscar">Buscar</button>
             </form>
-            <div class="search-bar__carrito-container">
-                C
+
+            <div class="search-bar__carrito-container" style="background-image: url(/img/logo/logo_small_icon_only.png);">
             </div>
-            <div class="menu-toggle">
-                <label class="menu-toggle__label" for="menu">
-                    <span class="menu-toggle__pan-arriba"></span>
-                    <span class="menu-toggle__medallon"></span>
-                    <span class="menu-toggle__pan-abajo"></span>
-                </label>
-            </div>
+
         </div>
+
+        <div class="menu-toggle2" >
+            <label class="menu-toggle__label2" for="menu2" style="background-image: url(/img/iconos/lupa.png);">
+            </label>
+        </div>
+
+        <div class="menu-toggle">
+            <label class="menu-toggle__label" for="menu" style="background-image: url(/img/iconos/menu.png);">
+            </label>
+        </div>
+
     </header>
 
-    <!-- --------- VISTA DEL CARRITO ----------- -->
-    <div class="section-carrito"></div>
-    <!-- --------------------------------------- -->
+    <section class="section-cart"></section>
+    <div class="section-pago"></div>
 
-    <main></main>
+    <main>
+        
+    </main>
 
-    <footer></footer>
+    <footer class="main-footer">
 
-    <!-- Código de librerías -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+        <section class="main-footer__features-container">
 
-    <!-- clientes http -->
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Card\ Payment_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Todos los medios de pago! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Wallet_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Promociones todos los días!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Instagram\ post\ _Outline.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Seguinos en las redes y buscá nuestros sorteos!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer-card">
+                <div class="main-footer-card__content">
+                    <div class="main-footer-card__image" style="background-image: url(/img/iconos-footer/Washing\ hands_Isometric.png)">
+                    </div>
+                    <div class="main-footer-card__back">
+                        <div class="main-footer-card__back-inner">
+                            <div class="main-footer-card__back-description">
+                                <p>
+                                    ¡Lavá tus manos antes
+                                    y después de recibir 
+                                    tu pedido!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+       
+        <section class="main-footer__info-container">
+
+            <div class="main-footer__info">
+                <p>
+                    2021 || Juan Manuel Gómez || Educación IT Bootcamp
+                </p>
+            </div>  
+
+            <div class="main-footer__separador">
+            </div>
+
+            <div class="main-footer__social-media">
+                
+                <a href="https://www.google.com.ar/maps/place/Av.+La+Plata+1772,+C1250AAU+CABA/@-34.6358237,-58.4251352,19z/data=!3m1!4b1!4m5!3m4!1s0x95bccbae96634181:0x6cfc4c1e4e261012!8m2!3d-34.6358248!4d-58.424588" target="_blank" class="main-footer__social-media-link-location" style="background-image: url(/img/iconos-footer/location.png);">
+                </a>
+
+                <a href="mailto:jmgomezn8@gmail.com" class="main-footer__social-media-link-mail" target="_blank" style="background-image: url(/img/iconos-footer/mail.png);">
+                </a>
+
+                <a href="https://wa.me/5491125681233" target="_blank" class="main-footer__social-media-link-whatsapp" style="background-image: url(/img/iconos-footer/whatsapp.png);">
+                </a>
+
+                <a href="https://www.facebook.com" class="main-footer__social-media-link-facebook" target="_blank" style="background-image: url(/img/iconos-footer/facebook.png);">
+                </a>
+
+                <a href="https://www.instagram.com" class="main-footer__social-media-link-instagram" target="_blank" style="background-image: url(/img/iconos-footer/instagram.png);">
+                </a>
+
+                <a href="https://twitter.com" class="main-footer__social-media-link-twitter" target="_blank" style="background-image: url(/img/iconos-footer/twitter.png);">
+                </a>
+
+                <a href="https://www.linkedin.com/in/juan-manuel-g%C3%B3mez-a682b8137/" class="main-footer__social-media-link-linkedin" target="_blank" style="background-image: url(/img/iconos-footer/linkedin.png);">
+                </a>
+
+            </div>
+            
+        </section>
+
+    </footer>
+
+    <!-- Librerías -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+    <!-- Clientes -->
     <script src="js/clientes/http.client.js"></script>
 
-    <!-- servicios -->
-    <script src="js/servicios/producto.js"></script>
+    <!-- Servicios -->
+    <script src="js/servicios/productos.js"></script>
     <script src="js/servicios/carrito.js"></script>
 
-    <!-- modelos -->
+    <!-- Modelos -->
     <script src="js/modelos/producto.js"></script>
     <script src="js/modelos/carrito.js"></script>
 
-    <!-- controladores -->
+    <!-- Controladores -->
     <script src="js/controladores/productos.js"></script>
     <script src="js/controladores/carrito.js"></script>
 
-    <!-- menúes -->
+    <!-- Menúes -->
     <script src="js/menu/alta.js"></script>
     <script src="js/menu/nosotros.js"></script>
     <script src="js/menu/contacto.js"></script>
     <script src="js/menu/inicio.js"></script>
-    <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/cart.js"></script>
+
+    <script src="js/menu/pago.js"></script>
 
     <!-- Código de arranque -->
     <script src="js/main.js"></script>

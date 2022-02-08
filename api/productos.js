@@ -1,16 +1,7 @@
-//import model from "../model/productos-mem.js"
-//import model from "../model/productos-file.js"
-/*
-import ProductoModelFile from "../model/productos-file.js"
-import ProductoModelMem from "../model/productos-mem.js"
-import ProductoModelMongoDB from "../model/productos-mongodb.js"
-*/
 import ProductoModel from "../model/productos.js"
 import config from '../config.js'
 
-//const model = new ProductoModelMongoDB()
-//const model = new ProductoModelMem()
-//const model = new ProductoModelFile()
+import ProductosValidation from "../model/validaciones/productos.js"
 
 const model = ProductoModel.get(config.TIPO_DE_PERSISTENCIA)
 
@@ -28,14 +19,29 @@ const obtenerProducto = async id => {
 
 /* Api Guardar */
 const guardarProducto = async producto => {
-    let productoCreado = await model.createProducto(producto)
-    return productoCreado
+    const errorValidacion = ProductosValidation.validar(producto)
+    if(!errorValidacion) {
+        let productoCreado = await model.createProducto(producto)
+        return productoCreado
+    }
+    else {
+        throw new Error(`Error en validación guardarProducto: ${errorValidacion.details[0].message}`)
+        console.log('Error en validación guardarProducto:', errorValidacion.details[0].message)
+        return {}
+    }
 }
 
 /* Api Actualizar */
 const actualizarProducto = async (id,producto) => {
-    let productoUpdate = await model.updateProducto(id,producto)
-    return productoUpdate
+    const errorValidacion = ProductosValidation.validar(producto)
+    if(!errorValidacion) {
+        let productoUpdate = await model.updateProducto(id,producto)
+        return productoUpdate
+    }
+    else {
+        console.log('Error en validación actualizarProducto:', errorValidacion.details[0].message)
+        return {}
+    }
 }
 
 /* Api Borrar */

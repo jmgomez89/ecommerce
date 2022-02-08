@@ -23,7 +23,7 @@ class Mongo_DB {
 
     static async conectarDB() {
         try {
-            if(!Mongo_DB.conexionOk) {
+            if(!Mongo_DB.conexionOk && config.STR_CNX) {
                 await mongoose.connect(config.STR_CNX, {
                     useNewUrlParser : true,
                     useUnifiedTopology: true

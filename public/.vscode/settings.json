@@ -1,9 +1,7 @@
 {
-    "liveSassCompile.settings.formats" : [
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "/css"
-        }
-    ]
+    "cSpell.ignoreWords": [
+        "chromecast",
+        "mavic"
+    ],
+    "liveServer.settings.port": 5501
 }

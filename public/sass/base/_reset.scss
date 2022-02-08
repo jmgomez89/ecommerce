@@ -1,11 +1,13 @@
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
 
-body {
+body{
     box-sizing: border-box;
+    background-color: #f1f2f3;
 }
+

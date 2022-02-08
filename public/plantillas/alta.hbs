@@ -1,12 +1,6 @@
-{{!-- {{#if validos}}
-    <td>Datos Válidos</td>
-{{else}}
-    <td>Datos NO Válidos</td>
-{{/if}} --}}
-{{#if productos.length }}
+{{#if productos.length}}
     <table>
         <tr>
-            {{!-- <th>ID</th> --}}
             <th>Nombre</th>
             <th>Precio</th>
             <th>Stock</th>
@@ -17,9 +11,9 @@
             <th>Envio</th>
             <th>Acción</th>
         </tr>
+
         {{#each productos}}
             <tr>
-                {{!-- <td>{{id}}</td> --}}
                 <td>{{nombre}}</td>
                 <td>{{precio}}</td>
                 <td>{{stock}}</td>
@@ -42,9 +36,10 @@
                     {{/if}}
                     <button onclick="productoController.borrarProducto('{{id}}')">Borrar</button>
                 </td>
-            </tr>
+            </tr>        
         {{/each}}
+
     </table>
 {{else}}
-    <h2>No se encontraron productos</h2>
+    <h3>No se encontraron productos</h3>
 {{/if}}
