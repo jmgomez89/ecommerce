@@ -141,7 +141,7 @@
     color:#0096C7;
 }
 
-@media  (max-width: 990px) {
+@media  (max-width: 1003px) {
     .search-bar {
         gap: 0em;
     
@@ -151,11 +151,11 @@
     }
 }
 
-@media  (max-width: 934px) {
+@media  (max-width: 949px) {
     .search-bar {
     
         &__form-search{
-            width: 8em;
+            width: 6em;
         }
     }
 }
@@ -182,7 +182,7 @@
     .search-bar {
         gap: 3em;
         &__form-search{
-            width: 15em;
+            width: 10em;
         }
     }
 }
@@ -196,7 +196,7 @@
     }
 }
 
-@media  (max-width: 589px) {
+@media  (max-width: 703px) {
 
     .search-bar {
         gap: 0em;

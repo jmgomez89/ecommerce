@@ -87,6 +87,7 @@
         }
 
         &-description {
+            text-align: center;
             font-size: 1.2em;
             font-weight: 900;
             line-height: 1.4em;
@@ -191,13 +192,14 @@
 }       
 
 .card__back-inner img {
-    align-self: center;
     cursor: pointer;
-    display: block;
     padding: 0 1.5em;
     height: 3em;
     min-width: 3em;
     backface-visibility: hidden;
     border-radius: 100%;
+}
 
+.add_cart {
+    margin: 0 auto;
 }

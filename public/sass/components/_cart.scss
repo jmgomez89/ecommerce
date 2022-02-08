@@ -47,4 +47,48 @@
 
 }
 
+@media (max-width: 768px) {
 
+    .section-cart {
+        
+        top: 150px;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    table button {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 60px;
+        height: 25px;
+        font-size: 0.5em;
+    }
+
+}
+
+@media (max-width: 573px) {
+
+    .section-cart {
+        
+        top: 150px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+
+}
+
+@media (max-width: 476px) {
+
+    .section-cart {
+        
+        top: 150px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+}
